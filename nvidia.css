@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background-color: rgb(179, 179, 179);
+}
+
+#wrapper {
+    margin: auto;
+    max-width: 1200px;
+    background-color: #fff;;
+}
+
+/* HEADER */ 
+#nav-bar {
+    display: flex;
+    align-items: flex-end;
+}
+
+#logo-grand { /* image logo NVIDIA */
+    width: 90px;
+    height: auto;
+}
+
+#nav-bar-links { /* navbar */
+    flex: 1;
+    text-transform: uppercase;
+    padding-bottom: 0.5em;
+    font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#nav-bar-links a { /* propriétés des liens de la navbar */
+    text-decoration: none;
+    color: steelblue;
+    text-align: center;
+    font-weight: bolder;
+    transition: color 0.5s, transform 0.5s;
+}
+
+#nav-bar-links a:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+#burger-btn { /* bouton hamburger */
+    display: none;
+}
+
+
+#banner{ /* image bannière */
+    width: 100%;
+    height: 18em;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+#hero {
+    position: relative;
+}
+
+#bandeau-vert { /* paragraphe */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+    background-color: rgba(72, 145, 0, 0.596);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#decouvrir {
+    background-color: rgb(0, 187, 25);
+    padding: 0.5em;
+    border-radius: 15px;
+    transition: transform 0.2s;
+}
+
+#decouvrir:hover {
+    transform: scale(1.1);
+}
+
+/* MAIN (CONTENU PRINCIPAL */ 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+main > * {/*propriétés des éléments du main */
+    padding: 1em 2em;
+    text-align: justify;
+    border-bottom: 4px solid #76B900;
+}
+
+#triangle {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.fa-caret-down { /* flèche vers le vers */
+    color: #76B900;
+    padding: 0;
+    margin-top: -0.42em;
+}
+
+article {
+    flex: 2;
+}
+
+h2 {
+    margin: 0;
+}
+
+#h2puissance {
+    text-transform: uppercase;
+    background-image: url(nvidia-icon.png);
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    padding-left: 1.5em;
+   
+}
+
+aside {
+    flex: 1;
+    background-color: #76B900;
+    color: #fff;
+}
+
+aside > h2 {
+    text-align: center;
+}
+
+#logo-black {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+
+#socialmedias { /* contient les icônes */
+    display: flex;
+    justify-content: space-around;
+}
+
+#socialmedias > a {
+    color: #fff;
+    transition: transform 0.2s;
+}
+
+#socialmedias > a:hover {
+    transform: scale(1.3);
+}
+
+
+/* FOOTER */
+footer { /* propriétés générales du footer */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer > * {
+    flex: 1;
+}
+
+footer > * {
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+}
+
+footer > section {
+    padding: 0 2em;
+}
+
+input {
+    padding: 0.6em 0.2em ;
+}
+
+input[type=submit] {
+    background-color: rgb(0, 158, 34);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(187, 153, 0);
+    transform: scale(1.1);
+}
+
+.gallery-item {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
+
+#gallery .gallery-item {
+    object-fit: cover;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 640px) {
+    #nav-bar-links {
+        font-size: 1rem;
+        flex-direction: column;
+        display: none;
+    }
+
+    #nav-bar-links a {
+        padding: 0.5em 0;
+    }
+
+    #burger-btn { /* bouton hamburger */
+        display: initial;
+        position: absolute;
+        right: 5%;
+        top: 1em;
+    }
+
+    /* main */
+    #triangle {
+        background-color: rgb(134, 134, 134);
+    }
+
+    /* footer */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        background-color: #868686;
+    }
+
+    #newsletter > * {
+        text-align: center;
+        display: block;
+    }
+
+    #form p > * {
+        display: block;
+    }
+
+    input[type=submit] { /* s'inscrire */
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    #gallery {
+        text-align: center;
+    }
+
+    #partners {
+        text-align: center;
+    }
+}
+    
